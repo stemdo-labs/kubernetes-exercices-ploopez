@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: colors
+  name: ejercicio10
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mylabel
+  template:
+    metadata:
+      labels:
+        app: mylabel
+    spec:
+      containers:
+      - name: coloread
+        image: noloknolo/colors:v1
+        ports:
+        - containerPort: 8080
+
+
+
+
